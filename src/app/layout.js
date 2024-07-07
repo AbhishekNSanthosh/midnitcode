@@ -20,8 +20,12 @@ export const metadata = {
     description: "Discover innovative solutions with Midnitcode Innovations. We transform your digital presence with cutting-edge web development and design.",
     creator: "@midnitcode",
   },
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }) {
@@ -31,7 +35,6 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
         <meta name="author" content={metadata.author} />
-        <meta name="viewport" content={metadata.viewport} />
         <meta name="robots" content={metadata.robots} />
         <meta property="og:title" content={metadata.openGraph.title} />
         <meta property="og:description" content={metadata.openGraph.description} />
