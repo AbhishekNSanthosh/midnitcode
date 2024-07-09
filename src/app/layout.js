@@ -23,15 +23,11 @@ export const metadata = {
   robots: "index, follow",
 };
 
-export const viewport = {
-  width: "device-width",
-  initialScale: 1,
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta charSet="UTF-8" />
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
         <meta name="author" content={metadata.author} />
@@ -44,6 +40,8 @@ export default function RootLayout({ children }) {
         <meta name="twitter:title" content={metadata.twitter.title} />
         <meta name="twitter:description" content={metadata.twitter.description} />
         <meta name="twitter:creator" content={metadata.twitter.creator} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://www.midnitcode.com" />
         <title>{metadata.title}</title>
       </head>
       <body className={inter.className}>{children}</body>
